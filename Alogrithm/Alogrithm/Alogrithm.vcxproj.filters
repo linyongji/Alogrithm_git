@@ -23,4 +23,9 @@
       <UniqueIdentifier>{185d7326-e9ee-437a-9d5f-caa5f1e2b48f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
