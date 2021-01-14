@@ -14,13 +14,31 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="头文件\include">
-      <UniqueIdentifier>{8b4d46af-84ff-4c81-af82-fef22d247ccf}</UniqueIdentifier>
+      <UniqueIdentifier>{f88f0a44-3961-476e-99b8-14f2f10bad28}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\src">
-      <UniqueIdentifier>{f60c45a4-7173-4582-afbb-71bf6dae4bb6}</UniqueIdentifier>
+      <UniqueIdentifier>{48875d36-2afe-43dd-86a2-c57932fd4017}</UniqueIdentifier>
     </Filter>
     <Filter Include="资源文件\config">
-      <UniqueIdentifier>{185d7326-e9ee-437a-9d5f-caa5f1e2b48f}</UniqueIdentifier>
+      <UniqueIdentifier>{91c3a977-b351-42b7-8090-fb3b4d94b965}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\1_ContainsNearbyDuplicate.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config\1_ContainsNearbyDuplicate.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
   </ItemGroup>
 </Project>
