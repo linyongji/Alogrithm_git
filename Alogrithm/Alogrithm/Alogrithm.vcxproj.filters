@@ -52,5 +52,11 @@
     <None Include="config\3_bool IsUgly.ini">
       <Filter>资源文件\config</Filter>
     </None>
+    <None Include="config\1_ContainsNearbyDuplicate.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\2_ExcelSheetColumnTiTle.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
   </ItemGroup>
 </Project>

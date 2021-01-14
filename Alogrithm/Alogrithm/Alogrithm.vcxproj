@@ -92,6 +92,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -150,6 +151,8 @@
     <ClInclude Include="include\3_bool IsUgly.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="config\1_ContainsNearbyDuplicate.ini" />
+    <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

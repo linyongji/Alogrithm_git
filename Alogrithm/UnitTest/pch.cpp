@@ -1,7 +1,13 @@
 ﻿// pch.cpp: 与预编译标头对应的源文件
 
 #include "pch.h"
-int CalcCount(int n, char(*str)[10])
+
+
+//***************************************************************************************************//
+//********读取ini文件函数，返回值为文件节的个数，入参为字符串数组的首地址，带回读取到的节名***************//
+//***************************************************************************************************//
+
+int CalcCount(int n, char(*str)[10],const char *FileName)
 {
 	TCHAR   chSectionNames[2048] = { 0 };//定义一个数组，保存读取节的名字
 	char* pSectionName; //保存找到的某个节名字符串的首地址
@@ -10,7 +16,7 @@ int CalcCount(int n, char(*str)[10])
 	int k = 0;      //临时变量，用于给str数组赋值
 	int m = 0;      //临时变量，用于给str数组赋值
 	int count = 0;      //统计节的个数    
-	GetPrivateProfileSectionNames(chSectionNames, 2048, "..//ex1.ini");//获取文件中的节名，每个节名以"\0"分割，保存在chSectionNames中
+	GetPrivateProfileSectionNames(chSectionNames, 2048, FileName);//获取文件中的节名，每个节名以"\0"分割，保存在chSectionNames中
 																	   //要加头文件
 	for (i = 0; i < 2048; i++, j++)//对chSectionName中保存的内容进行拆分
 	{
@@ -29,7 +35,6 @@ int CalcCount(int n, char(*str)[10])
 			{
 				str[k][m] = *(pSectionName + m);
 			}
-			//str[k][++m] = '\0';//手动给节名加上\0,表示这个节名结束
 			k++;//变量自加，用来保存下一个节名
 			//在获取节名的时候可以获取该节中键的值，前提是我们知道该节中有哪些键。
 			if (chSectionNames[i + 1] == 0)
@@ -41,12 +46,19 @@ int CalcCount(int n, char(*str)[10])
 	return count;//返回节名的个数
 }
 
-int* str_device(CString* str, int* value_count)
+
+#if 1	
+//***************************************************************************************************//
+//************切割字符串函数，返回值为int数组的首地址，通过传入int指针带回数组元素个数***************//
+//***************************************************************************************************//
+int* str_device(CString str, int* value_count)
 {
 	char* token;	//存放被切割后的第一个子串
 	static int Section_devide[500];//存放字符切割完成以后的数组元素值
 	char Section_value[500] = { 0 };//存放nums转换成string类型的结果
-	strcpy(Section_value, *str);//将CString类型的字符串转换成char类型，方便后面切割字符串
+	memset(Section_value, 0, sizeof(char) * 500);
+	*value_count = 0;
+	strcpy(Section_value, str);//将CString类型的字符串转换成char类型，方便后面切割字符串
 	//获得切割到的第一个字符串
 	token = strtok(Section_value, ",");
 	/* 继续获取其他的子字符串 */
@@ -56,4 +68,13 @@ int* str_device(CString* str, int* value_count)
 		(*value_count)++;		//记录存了多少个元素
 	}
 	return Section_devide;	//返回数组首地址
+}
+#endif
+
+bool CstrToBool(CString str)
+{
+	if (str == "1") {
+		return 1;
+	}
+	return 0;
 }

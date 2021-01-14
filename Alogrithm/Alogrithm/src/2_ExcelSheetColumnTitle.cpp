@@ -3,7 +3,7 @@
 //给定一个整数，返回它在 Excel 表中相对应的列名称，如果在Excel表中找不到该列，则返回""。
 char* ExcelSheetColumnTitle(int n)
 {
-	char str[STR_LEN] = { 0 };
+	static char str[STR_LEN] = { 0 };
 	int i = 0;
 	while (n > 0) {
 		 if ((n > 0) && (n <= 26)) {
@@ -15,6 +15,6 @@ char* ExcelSheetColumnTitle(int n)
 		 n = n - 26;
 		 i++;	
 	}
-	printf("%s", str);
-	return str;
+	char* pstr = str;
+	return pstr;
 }

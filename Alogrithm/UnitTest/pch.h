@@ -13,9 +13,13 @@
 #include<Windows.h>
 #include <atlstr.h>
 
+#include"../Alogrithm/include/1_ContainsNearbyDuplicate.h"
+#include"../Alogrithm/include/2_ExcelSheetColumnTitle.h"
+#include"../Alogrithm/include/3_bool IsUgly.h"
 
 
-int CalcCount(int n, char(*str)[10]);
-int* str_device(CString* str, int* value_count);
+int CalcCount(int n, char(*str)[10],const char *FileName);
+int* str_device(CString str, int* value_count);
+bool CstrToBool(CString str);
 
 #endif //PCH_H
