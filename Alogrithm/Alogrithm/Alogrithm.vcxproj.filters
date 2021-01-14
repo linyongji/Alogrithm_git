@@ -30,9 +30,15 @@
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\1_ContainsNearbyDuplicate.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,6 +14,7 @@
 #include <atlstr.h>
 
 
+
 int CalcCount(int n, char(*str)[10]);
 int* str_device(CString* str, int* value_count);
 
