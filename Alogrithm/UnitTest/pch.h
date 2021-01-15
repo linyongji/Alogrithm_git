@@ -16,6 +16,8 @@
 #include"../Alogrithm/include/1_ContainsNearbyDuplicate.h"
 #include"../Alogrithm/include/2_ExcelSheetColumnTitle.h"
 #include"../Alogrithm/include/3_bool IsUgly.h"
+#include"../Alogrithm/include/4_IsPalindrome.h"
+
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

@@ -103,7 +103,7 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>../Alogrithm/Debug/1_ContainsNearbyDuplicate.obj;../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;../Alogrithm/Debug/3_bool IsUgly.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Alogrithm/Debug/1_ContainsNearbyDuplicate.obj;../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;../Alogrithm/Debug/3_bool IsUgly.obj;../Alogrithm/Debug/4_IsPalindrome.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
