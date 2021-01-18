@@ -18,6 +18,7 @@
 #include"../Alogrithm/include/3_bool IsUgly.h"
 #include"../Alogrithm/include/4_IsPalindrome.h"
 #include"../Alogrithm/include/5_MinDepth.h"
+#include"../Alogrithm/include/6_ContainsDuplicate.h"
 
 
 

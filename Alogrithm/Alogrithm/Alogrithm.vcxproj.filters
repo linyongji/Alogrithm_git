@@ -42,6 +42,9 @@
     <ClCompile Include="src\5_MinDepth.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\6_ContainsDuplicate.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -59,6 +62,9 @@
     <ClInclude Include="include\5_MinDepth.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\6_ContainsDuplicate.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -74,6 +80,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\5_MinDepth.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\6_ContainsDuplicate.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>

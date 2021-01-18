@@ -7,6 +7,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_3  "../Alogrithm/config/3_bool IsUgly.ini"
 #define FileName_4  "../Alogrithm/config/4_IsPalindrome.ini"
 #define FileName_5  "../Alogrithm/config/5_MinDepth.ini"
+#define FileName_6  "../Alogrithm/config/6_ContainsDuplicate.ini"
 
 namespace UnitTest
 {
@@ -90,6 +91,24 @@ namespace UnitTest
 				int nReal = MinDepth(root);
 				Assert::AreEqual(nReal,_ttoi(nExpect));
 				free_tree(root);
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_6)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_6);
+			int array_count = 0;
+			int* Section_Value;
+			CString Na, Nb, nExpect;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", Na.GetBuffer(200), 200, FileName_6);
+				GetPrivateProfileString(Section_Name[i], "output", " ", nExpect.GetBuffer(20), 20, FileName_6);
+				Section_Value = str_device(Na, &array_count);
+				bool nReal = containsDuplicate(Section_Value, array_count);
+				Assert::AreEqual(nReal, CstrToBool(nExpect));
 			}
 		}
 	};

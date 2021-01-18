@@ -145,6 +145,7 @@
     <ClCompile Include="src\3_bool IsUgly.cpp" />
     <ClCompile Include="src\4_IsPalindrome.cpp" />
     <ClCompile Include="src\5_MinDepth.cpp" />
+    <ClCompile Include="src\6_ContainsDuplicate.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="include\3_bool IsUgly.h" />
     <ClInclude Include="include\4_IsPalindrome.h" />
     <ClInclude Include="include\5_MinDepth.h" />
+    <ClInclude Include="include\6_ContainsDuplicate.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
@@ -160,6 +162,7 @@
     <None Include="config\3_bool IsUgly.ini" />
     <None Include="config\4_IsPalindrome.ini" />
     <None Include="config\5_MinDepth.ini" />
+    <None Include="config\6_ContainsDuplicate.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
