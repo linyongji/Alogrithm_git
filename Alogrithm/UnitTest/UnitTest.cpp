@@ -10,7 +10,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_6  "../Alogrithm/config/6_ContainsDuplicate.ini"
 #define FileName_7  "../Alogrithm/config/7_MaxDepth.ini"
 #define FileName_8  "../Alogrithm/config/8_HammingWeight.ini"
-
+#define FileName_9  "../Alogrithm/config/9_AddBinary.ini"
 
 
 namespace UnitTest
@@ -147,6 +147,26 @@ namespace UnitTest
 				GetPrivateProfileString(Section_Name[i], "output", " ", nExpect.GetBuffer(100), 100, FileName_8);
 				int nReal = HammingWeight(_ttoi(Na));
 				Assert::AreEqual(nReal, _ttoi(nExpect));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_9)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_9);
+			CString input1,input2, output;	
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input1", " ", input1.GetBuffer(100), 100, FileName_9);
+				GetPrivateProfileString(Section_Name[i], "input2", " ", input2.GetBuffer(100), 100, FileName_9);
+				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(200), 200, FileName_9);
+				char p1[100];
+				char p2[100];
+				strcpy(p1, input1);
+				strcpy(p2, input2);
+				char* nReal = AddBinary(p1,p2);
+				Assert::AreEqual(nReal, output);
 			}
 		}
 	};

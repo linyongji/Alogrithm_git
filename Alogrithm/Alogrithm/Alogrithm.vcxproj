@@ -148,6 +148,7 @@
     <ClCompile Include="src\6_ContainsDuplicate.cpp" />
     <ClCompile Include="src\7_MaxDepth.cpp" />
     <ClCompile Include="src\8_HammingWeight.cpp" />
+    <ClCompile Include="src\9_AddBinary.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +160,7 @@
     <ClInclude Include="include\6_ContainsDuplicate.h" />
     <ClInclude Include="include\7_MaxDepth.h" />
     <ClInclude Include="include\8_HammingWeight.h" />
+    <ClInclude Include="include\9_AddBinary.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
@@ -169,6 +171,7 @@
     <None Include="config\6_ContainsDuplicate.ini" />
     <None Include="config\7_MaxDepth.ini" />
     <None Include="config\8_HammingWeight.ini" />
+    <None Include="config\9_AddBinary.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
