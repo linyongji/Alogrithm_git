@@ -54,6 +54,9 @@
     <ClCompile Include="src\9_AddBinary.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\10_BinaryTreePaths.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -83,6 +86,9 @@
     <ClInclude Include="include\9_AddBinary.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\10_BinaryTreePaths.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -110,6 +116,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\9_AddBinary.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\10_BinaryTreePaths.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>
