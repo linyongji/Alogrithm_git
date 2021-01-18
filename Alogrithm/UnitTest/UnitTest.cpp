@@ -45,7 +45,7 @@ namespace UnitTest
 					GetPrivateProfileString(Section_Name[i], "Na", " ", Na.GetBuffer(20), 20, FileName_2);
 					GetPrivateProfileString(Section_Name[i], "nExpect", " ", nExpect.GetBuffer(100), 100, FileName_2);
 					char* nReal = ExcelSheetColumnTitle(_ttoi(Na));
-					Assert::AreEqual(*nReal, *nExpect);
+					Assert::AreEqual(nReal, nExpect);
 				}
 			}
 	};

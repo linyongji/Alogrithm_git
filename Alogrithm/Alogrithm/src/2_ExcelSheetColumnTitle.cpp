@@ -1,20 +1,17 @@
 #include "../include/2_ExcelSheetColumnTitle.h"
-#define STR_LEN 100
+
 //给定一个整数，返回它在 Excel 表中相对应的列名称，如果在Excel表中找不到该列，则返回""。
 char* ExcelSheetColumnTitle(int n)
 {
-	static char str[STR_LEN] = { 0 };
-	int i = 0;
-	while (n > 0) {
-		 if ((n > 0) && (n <= 26)) {
-			str[i] = 'A' + n - 1;
-		}
-		else if (n > 26) {
-			 str[i] = 'A';
-		}
-		 n = n - 26;
-		 i++;	
+	char* ret = (char*)malloc(sizeof(char) * 10);//开辟一片空间，存需要返回的字符串
+	int i = 9;//
+	while (n)
+	{
+		n -= 1;//给n减一，因为n后面是从'A'开始的
+		ret[i - 1] = n % 26 + 'A';//从后往前赋值，从最后一个赋值到第一个
+		n /= 26;
+		i--;//给下一个赋值
 	}
-	char* pstr = str;
-	return pstr;
+	ret[9] = '\0';
+	return ret + i;//去掉前面的前导字符，如果前面没有字符则指针后移
 }
