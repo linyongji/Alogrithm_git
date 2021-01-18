@@ -86,8 +86,8 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\10_BinaryTreePaths.cpp" />
     <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp" />
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp" />
     <ClCompile Include="src\3_bool IsUgly.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\10_BinaryTreePaths.h" />
     <ClInclude Include="include\1_ContainsNearbyDuplicate.h" />
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h" />
     <ClInclude Include="include\3_bool IsUgly.h" />
@@ -163,6 +165,7 @@
     <ClInclude Include="include\9_AddBinary.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="config\10_BinaryTreePaths.ini" />
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
     <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />

@@ -22,6 +22,7 @@
 #include"../Alogrithm/include/7_MaxDepth.h"
 #include"../Alogrithm/include/8_HammingWeight.h"
 #include"../Alogrithm/include/9_AddBinary.h"
+#include"../Alogrithm/include/10_BinaryTreePaths.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

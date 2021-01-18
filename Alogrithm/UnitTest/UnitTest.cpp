@@ -11,6 +11,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_7  "../Alogrithm/config/7_MaxDepth.ini"
 #define FileName_8  "../Alogrithm/config/8_HammingWeight.ini"
 #define FileName_9  "../Alogrithm/config/9_AddBinary.ini"
+#define FileName_10 "../Alogrithm/config/10_BinaryTreePaths.ini"
 
 
 namespace UnitTest
@@ -167,6 +168,37 @@ namespace UnitTest
 				strcpy(p2, input2);
 				char* nReal = AddBinary(p1,p2);
 				Assert::AreEqual(nReal, output);
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_10)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_10);
+			CString Na, nExpect;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", Na.GetBuffer(200), 200, FileName_10);
+				GetPrivateProfileString(Section_Name[i], "output", " ", nExpect.GetBuffer(500), 500, FileName_10);
+				char return_str[100][50] = { 0 };
+				int return_count = str_device2(Na, return_str);
+				TreeNode3* root = CreatBitTree3(return_str, return_count);
+				int returnSize = 0;
+				char** returnStr=NULL;
+				returnStr = binaryTreePaths(root, &returnSize);
+				char nReal[500] = { 0 };
+				for (int i = 0; i < returnSize; i++)
+				{
+					strcat(nReal, returnStr[i]);
+					if (i != (returnSize - 1))
+					{
+						nReal[strlen(nReal)] = ',';
+					}
+				}
+
+				Assert::AreEqual(nReal,nExpect);
+				free_tree3(root);
 			}
 		}
 	};
