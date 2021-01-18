@@ -8,6 +8,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_4  "../Alogrithm/config/4_IsPalindrome.ini"
 #define FileName_5  "../Alogrithm/config/5_MinDepth.ini"
 #define FileName_6  "../Alogrithm/config/6_ContainsDuplicate.ini"
+#define FileName_7  "../Alogrithm/config/7_MaxDepth.ini"
 
 namespace UnitTest
 {
@@ -109,6 +110,25 @@ namespace UnitTest
 				Section_Value = str_device(Na, &array_count);
 				bool nReal = containsDuplicate(Section_Value, array_count);
 				Assert::AreEqual(nReal, CstrToBool(nExpect));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_7)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_7);
+			CString Na, nExpect;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", Na.GetBuffer(200), 200, FileName_7);
+				GetPrivateProfileString(Section_Name[i], "output", " ", nExpect.GetBuffer(20), 20, FileName_7);
+				char return_str[100][50] = { 0 };
+				int return_count = str_device2(Na, return_str);
+				TreeNode2* root = CreatBitTree2(return_str, return_count);
+				int nReal = MaxDepth(root);
+				Assert::AreEqual(nReal, _ttoi(nExpect));
+				free_tree2(root);
 			}
 		}
 	};

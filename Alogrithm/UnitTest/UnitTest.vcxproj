@@ -103,7 +103,7 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>../Alogrithm/Debug/1_ContainsNearbyDuplicate.obj;../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;../Alogrithm/Debug/3_bool IsUgly.obj;../Alogrithm/Debug/4_IsPalindrome.obj;../Alogrithm/Debug/5_MinDepth.obj;../Alogrithm/Debug/6_ContainsDuplicate.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Alogrithm/Debug/1_ContainsNearbyDuplicate.obj;../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;../Alogrithm/Debug/3_bool IsUgly.obj;../Alogrithm/Debug/4_IsPalindrome.obj;../Alogrithm/Debug/5_MinDepth.obj;../Alogrithm/Debug/6_ContainsDuplicate.obj;../Alogrithm/Debug/7_MaxDepth.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -19,7 +19,7 @@
 #include"../Alogrithm/include/4_IsPalindrome.h"
 #include"../Alogrithm/include/5_MinDepth.h"
 #include"../Alogrithm/include/6_ContainsDuplicate.h"
-
+#include"../Alogrithm/include/7_MaxDepth.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);
