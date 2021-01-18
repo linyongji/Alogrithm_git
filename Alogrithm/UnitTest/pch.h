@@ -20,6 +20,7 @@
 #include"../Alogrithm/include/5_MinDepth.h"
 #include"../Alogrithm/include/6_ContainsDuplicate.h"
 #include"../Alogrithm/include/7_MaxDepth.h"
+#include"../Alogrithm/include/8_HammingWeight.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

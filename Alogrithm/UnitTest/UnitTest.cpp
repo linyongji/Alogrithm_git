@@ -9,6 +9,9 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_5  "../Alogrithm/config/5_MinDepth.ini"
 #define FileName_6  "../Alogrithm/config/6_ContainsDuplicate.ini"
 #define FileName_7  "../Alogrithm/config/7_MaxDepth.ini"
+#define FileName_8  "../Alogrithm/config/8_HammingWeight.ini"
+
+
 
 namespace UnitTest
 {
@@ -129,6 +132,21 @@ namespace UnitTest
 				int nReal = MaxDepth(root);
 				Assert::AreEqual(nReal, _ttoi(nExpect));
 				free_tree2(root);
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_8)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_8);
+			CString Na, nExpect;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", Na.GetBuffer(20), 20, FileName_8);
+				GetPrivateProfileString(Section_Name[i], "output", " ", nExpect.GetBuffer(100), 100, FileName_8);
+				int nReal = HammingWeight(_ttoi(Na));
+				Assert::AreEqual(nReal, _ttoi(nExpect));
 			}
 		}
 	};

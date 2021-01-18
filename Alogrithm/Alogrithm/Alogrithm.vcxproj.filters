@@ -48,6 +48,9 @@
     <ClCompile Include="src\7_MaxDepth.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\8_HammingWeight.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -71,6 +74,9 @@
     <ClInclude Include="include\7_MaxDepth.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\8_HammingWeight.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -92,6 +98,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\7_MaxDepth.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\8_HammingWeight.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>
