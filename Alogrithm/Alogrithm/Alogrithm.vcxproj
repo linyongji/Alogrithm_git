@@ -85,7 +85,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
     </ClCompile>
@@ -143,6 +143,7 @@
     <ClCompile Include="src\10_BinaryTreePaths.cpp" />
     <ClCompile Include="src\11_CanWinNim.cpp" />
     <ClCompile Include="src\12_IsValid.cpp" />
+    <ClCompile Include="src\13_MyAtoi.cpp" />
     <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp" />
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp" />
     <ClCompile Include="src\3_bool IsUgly.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="include\10_BinaryTreePaths.h" />
     <ClInclude Include="include\11_CanWinNim.h" />
     <ClInclude Include="include\12_IsValid.h" />
+    <ClInclude Include="include\13_MyAtoi.h" />
     <ClInclude Include="include\1_ContainsNearbyDuplicate.h" />
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h" />
     <ClInclude Include="include\3_bool IsUgly.h" />
@@ -172,6 +174,7 @@
     <None Include="config\10_BinaryTreePaths.ini" />
     <None Include="config\11_CanWinNim.ini" />
     <None Include="config\12_IsValid.ini" />
+    <None Include="config\13_MyAtoi.ini" />
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
     <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />

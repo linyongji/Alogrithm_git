@@ -14,7 +14,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_10 "../Alogrithm/config/10_BinaryTreePaths.ini"
 #define FileName_11 "../Alogrithm/config/11_CanWinNim.ini"
 #define FileName_12 "../Alogrithm/config/12_IsValid.ini"
-
+#define FileName_13 "../Alogrithm/config/13_MyAtoi.ini"
 
 namespace UnitTest
 {
@@ -233,6 +233,23 @@ namespace UnitTest
 				strcpy(input_char, input);
 				bool nReal = IsValid(input_char);
 				Assert::AreEqual(nReal, CstrToBool(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_13)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_13);
+			char input_char[1024] = { 0 };
+			CString input, output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", input.GetBuffer(200), 200, FileName_13);
+				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(20), 20, FileName_13);
+				strcpy(input_char, input);
+				int nReal = MyAtoi(input_char);
+				Assert::AreEqual(nReal, _ttoi(output));
 			}
 		}
 	};
