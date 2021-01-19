@@ -12,6 +12,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_8  "../Alogrithm/config/8_HammingWeight.ini"
 #define FileName_9  "../Alogrithm/config/9_AddBinary.ini"
 #define FileName_10 "../Alogrithm/config/10_BinaryTreePaths.ini"
+#define FileName_11 "../Alogrithm/config/11_CanWinNim.ini"
 
 
 namespace UnitTest
@@ -199,6 +200,21 @@ namespace UnitTest
 
 				Assert::AreEqual(nReal,nExpect);
 				free_tree3(root);
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_11)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_11);
+			CString input,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", input.GetBuffer(20), 20, FileName_11);
+				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(20), 20, FileName_11);
+				bool nReal = CanWinNim(_ttoi(input));
+				Assert::AreEqual(nReal, CstrToBool(output));
 			}
 		}
 	};
