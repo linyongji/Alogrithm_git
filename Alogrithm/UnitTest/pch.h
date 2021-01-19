@@ -24,6 +24,7 @@
 #include"../Alogrithm/include/9_AddBinary.h"
 #include"../Alogrithm/include/10_BinaryTreePaths.h"
 #include"../Alogrithm/include/11_CanWinNim.h"
+#include"../Alogrithm/include/12_IsValid.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

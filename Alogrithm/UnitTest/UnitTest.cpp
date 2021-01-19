@@ -13,6 +13,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_9  "../Alogrithm/config/9_AddBinary.ini"
 #define FileName_10 "../Alogrithm/config/10_BinaryTreePaths.ini"
 #define FileName_11 "../Alogrithm/config/11_CanWinNim.ini"
+#define FileName_12 "../Alogrithm/config/12_IsValid.ini"
 
 
 namespace UnitTest
@@ -214,6 +215,23 @@ namespace UnitTest
 				GetPrivateProfileString(Section_Name[i], "input", " ", input.GetBuffer(20), 20, FileName_11);
 				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(20), 20, FileName_11);
 				bool nReal = CanWinNim(_ttoi(input));
+				Assert::AreEqual(nReal, CstrToBool(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_12)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_12);
+			char input_char[1024] = { 0 };
+			CString input,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", input.GetBuffer(200), 200, FileName_12);
+				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(20), 20, FileName_12);
+				strcpy(input_char, input);
+				bool nReal = IsValid(input_char);
 				Assert::AreEqual(nReal, CstrToBool(output));
 			}
 		}

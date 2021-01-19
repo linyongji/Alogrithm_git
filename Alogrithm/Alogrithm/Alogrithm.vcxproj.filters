@@ -60,6 +60,9 @@
     <ClCompile Include="src\11_CanWinNim.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\12_IsValid.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -95,6 +98,9 @@
     <ClInclude Include="include\10_BinaryTreePaths.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\12_IsValid.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -128,6 +134,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\11_CanWinNim.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\12_IsValid.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>
