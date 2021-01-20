@@ -30,13 +30,12 @@ bool ContainsNearbyDuplicate(int* nums, int numsSize, int k)
 	node* arr = NULL;		//定义一个node 指针
 	int i = 0;
 	int j = 0;
-	arr = (node*)malloc(sizeof(node) * 100000);//为arr指针分配足够空间，用来保存数组
+	arr = (node*)malloc(sizeof(node) * numsSize);//为arr指针分配足够空间，用来保存数组
 	if (NULL == arr)
 	{
 		printf("内存分配失败\n");
 	}
-	else
-	{
+	else{
 		for (i = 0; i < numsSize; i++)//遍历数组nums，把nums里的值和对应的下标保存在arr中
 		{
 			arr[i].value = nums[i];

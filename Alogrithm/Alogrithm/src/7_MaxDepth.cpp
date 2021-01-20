@@ -42,28 +42,29 @@ void CreatBitTreeNode2(char str[][50], int return_count, TreeNode2* cur, int cur
 	CreatBitTreeNode2(str, return_count, cur->left, 2 * curIndex + 1);
 	CreatBitTreeNode2(str, return_count, cur->right, 2 * curIndex + 2);
 }
+//返回二叉树中，最大深度
 int MaxDepth(struct TreeNode2* root)
 {
 	int Depth = 0;
 	int L1, L2;
-	if (NULL == root) {
+	if (NULL == root) {//根节点为NULL，返回0
 		return 0;
-	}
+	}//左右子树都为NULL，返回1
 	else if ((NULL == root->left) && (NULL == root->right)) {
 		return 1;
-	}
+	}//左子树不为NULL，右子树为NULL，继续搜索左子树
 	else if ((NULL != root->left) && (NULL == root->right)) {
 		Depth = MaxDepth(root->left);
-	}
+	}//右子树不为NUULL，左子树为NULL，继续搜索右子树
 	else if ((NULL == root->left) && (NULL != root->right)) {
 		Depth = MaxDepth(root->right);
-	}
+	}//如果左右子树都不为NULL，左右子树继续搜索
 	else {
 		L1 = MaxDepth(root->left);
 		L2 = MaxDepth(root->right);
-		Depth = fmax(L1, L2);
+		Depth = fmax(L1, L2);//返回左右子树中，较大的一个
 	}
-	return Depth + 1;
+	return Depth + 1;//每次搜索完，对Depth进行累加，最后返回。
 }
 void free_tree2(TreeNode2* T)//后序释放
 {

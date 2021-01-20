@@ -1,9 +1,7 @@
 #include<stdio.h>
-#include "../include/13_MyAtoi.h"
-#include "../include/14_SingleNumber.h"
+#include "../include/4_IsPalindrome.h"
 int main()
 {
-	int arr[] = { -1,-2,-3,-4,-4,-3,-2,-1,0 };
-	printf("%d\n", SingleNumber(arr, sizeof(arr)/sizeof(int)));
+	printf("%d\n",IsPalindrome(-123321));
 	return 0;
 }

@@ -1,7 +1,9 @@
 #include "../include/12_IsValid.h"
 #pragma warning(disable:6385)
 #pragma warning(disable:6386)
-//思路：让左括号进栈，右括号和左括号依次进行匹配。
+//题目：括号匹配问题
+//思路：定义一个标志位，让左括号进栈，标志位移动，之后右括号和左括号依次进行匹配，
+//		匹配上了标志位移动，最后判断标志位是否回到原位。
 bool IsValid(char* s) {
 	int s_len = strlen(s);//定义一个int变量，存放字符串长度
 	char* stack = (char*)malloc(sizeof(char) * (s_len + 2));//定义一个char*指针用来模拟一个栈

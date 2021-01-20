@@ -1,12 +1,12 @@
 #include"../include/9_AddBinary.h"
-
+//题目：给你两个二进制字符串，返回它们的和（用二进制表示）。
+//思路：获得两个字符串长度，定义一个进位标志位，从字符串的后面往前加
 char* AddBinary(char* a, char* b)
 {
 	int len_a = strlen(a) - 1;//存放字符串a的长度
 	int len_b = strlen(b) - 1;//存放字符串b的长度
 	int carry = 0;//进位标志
 	int len = len_a > len_b ? len_a : len_b;//获取两个字符串中长度较长的哪一个
-
 	char* pstr = (char*)malloc(sizeof(char) * (len + 3));//定义一个指针作为返回值，多分配两个空间是为了防止有进位和字符结尾标志\0
 	if (NULL == pstr)
 		return NULL;
@@ -22,7 +22,7 @@ char* AddBinary(char* a, char* b)
 	}
 	//判断要不要加前导0
 	if (carry == 0) {
-		return (pstr + 1);//指针加一，表示指针向后移动，在这里如果不进位的话指针就指向非0的下一位。
+		return (pstr + 1);//指针加一，表示指针向后移动，
 	}
 	else {
 		pstr[0] = '1';
