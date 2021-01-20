@@ -26,6 +26,7 @@
 #include"../Alogrithm/include/11_CanWinNim.h"
 #include"../Alogrithm/include/12_IsValid.h"
 #include"../Alogrithm/include/13_MyAtoi.h"
+#include"../Alogrithm/include/14_SingleNumber.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

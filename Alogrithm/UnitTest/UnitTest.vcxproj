@@ -103,7 +103,7 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>../Alogrithm/Debug/1_ContainsNearbyDuplicate.obj;../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;../Alogrithm/Debug/3_bool IsUgly.obj;../Alogrithm/Debug/4_IsPalindrome.obj;../Alogrithm/Debug/5_MinDepth.obj;../Alogrithm/Debug/6_ContainsDuplicate.obj;../Alogrithm/Debug/7_MaxDepth.obj;../Alogrithm/Debug/8_HammingWeight.obj;../Alogrithm/Debug/9_AddBinary.obj;../Alogrithm/Debug/10_BinaryTreePaths.obj;../Alogrithm/Debug/11_CanWinNim.obj;../Alogrithm/Debug/12_IsValid.obj;../Alogrithm/Debug/13_MyAtoi.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Alogrithm/Debug/1_ContainsNearbyDuplicate.obj;../Alogrithm/Debug/2_ExcelSheetColumnTitle.obj;../Alogrithm/Debug/3_bool IsUgly.obj;../Alogrithm/Debug/4_IsPalindrome.obj;../Alogrithm/Debug/5_MinDepth.obj;../Alogrithm/Debug/6_ContainsDuplicate.obj;../Alogrithm/Debug/7_MaxDepth.obj;../Alogrithm/Debug/8_HammingWeight.obj;../Alogrithm/Debug/9_AddBinary.obj;../Alogrithm/Debug/10_BinaryTreePaths.obj;../Alogrithm/Debug/11_CanWinNim.obj;../Alogrithm/Debug/12_IsValid.obj;../Alogrithm/Debug/13_MyAtoi.obj;../Alogrithm/Debug/14_SingleNumber.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -15,6 +15,8 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_11 "../Alogrithm/config/11_CanWinNim.ini"
 #define FileName_12 "../Alogrithm/config/12_IsValid.ini"
 #define FileName_13 "../Alogrithm/config/13_MyAtoi.ini"
+#define FileName_14 "../Alogrithm/config/14_SingleNumber.ini"
+
 
 namespace UnitTest
 {
@@ -249,6 +251,24 @@ namespace UnitTest
 				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(20), 20, FileName_13);
 				strcpy(input_char, input);
 				int nReal = MyAtoi(input_char);
+				Assert::AreEqual(nReal, _ttoi(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_14)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_14);
+			int array_count = 0;
+			int* Section_Value;
+			CString input,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "input", " ", input.GetBuffer(200), 200, FileName_14);
+				GetPrivateProfileString(Section_Name[i], "output", " ", output.GetBuffer(20), 20, FileName_14);
+				Section_Value = str_device(input, &array_count);
+				int nReal = SingleNumber(Section_Value, array_count);
 				Assert::AreEqual(nReal, _ttoi(output));
 			}
 		}
