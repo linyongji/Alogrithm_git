@@ -1,7 +1,11 @@
 #include<stdio.h>
-#include "../include/4_IsPalindrome.h"
+#include "../include/15_WordPattern.h"
+
+
 int main()
 {
-	printf("%d\n",IsPalindrome(-123321));
+	char p[] = "aba";
+	char s[] = "dog cat dog d";
+	printf("%d\n", WordPattern(p, s));
 	return 0;
 }

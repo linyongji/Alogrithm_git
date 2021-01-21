@@ -16,6 +16,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_12 "../Alogrithm/config/12_IsValid.ini"
 #define FileName_13 "../Alogrithm/config/13_MyAtoi.ini"
 #define FileName_14 "../Alogrithm/config/14_SingleNumber.ini"
+#define FileName_15 "../Alogrithm/config/15_WordPattern.ini"
 
 
 namespace UnitTest
@@ -270,6 +271,26 @@ namespace UnitTest
 				Section_Value = str_device(input, &array_count);
 				int nReal = SingleNumber(Section_Value, array_count);
 				Assert::AreEqual(nReal, _ttoi(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_15)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_15);
+			char Pattern_char[1024] = { 0 };
+			char Str_char[1024] = { 0 };
+			CString Pattern, Str, Output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Pattern", " ", Pattern.GetBuffer(200), 200, FileName_15);
+				GetPrivateProfileString(Section_Name[i], "Str", " ", Str.GetBuffer(400), 400, FileName_15);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", Output.GetBuffer(20), 20, FileName_15);
+				strcpy(Pattern_char, Pattern);
+				strcpy(Str_char, Str);
+				bool nReal = WordPattern(Pattern_char, Str_char);
+				Assert::AreEqual(nReal, CstrToBool(Output));
 			}
 		}
 	};
