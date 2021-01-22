@@ -1,11 +1,9 @@
 #include<stdio.h>
-#include "../include/15_WordPattern.h"
+#include "../include/16_ReverseBits.h"
 
 
 int main()
 {
-	char p[] = "aba";
-	char s[] = "dog cat dog d";
-	printf("%d\n", WordPattern(p, s));
+	printf("%ld\n", ReverseBits(1));
 	return 0;
 }

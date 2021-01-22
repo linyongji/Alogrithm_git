@@ -17,6 +17,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_13 "../Alogrithm/config/13_MyAtoi.ini"
 #define FileName_14 "../Alogrithm/config/14_SingleNumber.ini"
 #define FileName_15 "../Alogrithm/config/15_WordPattern.ini"
+#define FileName_16 "../Alogrithm/config/16_ReverseBits.ini"
 
 
 namespace UnitTest
@@ -291,6 +292,21 @@ namespace UnitTest
 				strcpy(Str_char, Str);
 				bool nReal = WordPattern(Pattern_char, Str_char);
 				Assert::AreEqual(nReal, CstrToBool(Output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_16)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_16);
+			CString input,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", input.GetBuffer(200), 200, FileName_16);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(200), 200, FileName_16);
+				uint32_t nReal = ReverseBits((uint32_t)_atoi64(input));
+				Assert::AreEqual(nReal, (uint32_t)_atoi64(output));
 			}
 		}
 	};
