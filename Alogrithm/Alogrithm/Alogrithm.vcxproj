@@ -149,6 +149,7 @@
     <ClCompile Include="src\15_WordPattern.cpp" />
     <ClCompile Include="src\16_ReverseBits.cpp" />
     <ClCompile Include="src\18_PlusOne.cpp" />
+    <ClCompile Include="src\19_MySqrt.cpp" />
     <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp" />
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp" />
     <ClCompile Include="src\3_bool IsUgly.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="include\15_WordPattern.h" />
     <ClInclude Include="include\16_ReverseBits.h" />
     <ClInclude Include="include\18_PlusOne.h" />
+    <ClInclude Include="include\19_MySqrt.h" />
     <ClInclude Include="include\1_ContainsNearbyDuplicate.h" />
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h" />
     <ClInclude Include="include\3_bool IsUgly.h" />
@@ -188,6 +190,7 @@
     <None Include="config\15_WordPattern.ini" />
     <None Include="config\16_ReverseBits.ini" />
     <None Include="config\18_PlusOne.ini" />
+    <None Include="config\19_MySqrt.ini" />
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
     <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />

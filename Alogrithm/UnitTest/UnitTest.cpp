@@ -19,7 +19,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_15 "../Alogrithm/config/15_WordPattern.ini"
 #define FileName_16 "../Alogrithm/config/16_ReverseBits.ini"
 #define FileName_18 "../Alogrithm/config/18_PlusOne.ini"
-
+#define FileName_19 "../Alogrithm/config/19_MySqrt.ini"
 
 namespace UnitTest
 {
@@ -330,6 +330,21 @@ namespace UnitTest
 				for (int i = 0; i < input_count; i++) {
 					Assert::AreEqual(nReal[i], output_value[i]);
 				}
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_19)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_19);
+			CString input,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", input.GetBuffer(100), 100, FileName_19);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(100), 100, FileName_19);
+				int nReal = MySqrt(_ttoi(input));
+				Assert::AreEqual(nReal, _ttoi(output));
 			}
 		}
 	};
