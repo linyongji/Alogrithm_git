@@ -75,6 +75,9 @@
     <ClCompile Include="src\16_ReverseBits.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\18_PlusOne.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -125,6 +128,9 @@
     <ClInclude Include="include\16_ReverseBits.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\18_PlusOne.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -173,6 +179,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\16_ReverseBits.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\18_PlusOne.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>

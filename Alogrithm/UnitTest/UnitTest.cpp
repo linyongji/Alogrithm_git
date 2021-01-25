@@ -18,6 +18,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_14 "../Alogrithm/config/14_SingleNumber.ini"
 #define FileName_15 "../Alogrithm/config/15_WordPattern.ini"
 #define FileName_16 "../Alogrithm/config/16_ReverseBits.ini"
+#define FileName_18 "../Alogrithm/config/18_PlusOne.ini"
 
 
 namespace UnitTest
@@ -307,6 +308,28 @@ namespace UnitTest
 				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(200), 200, FileName_16);
 				uint32_t nReal = ReverseBits((uint32_t)_atoi64(input));
 				Assert::AreEqual(nReal, (uint32_t)_atoi64(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_18)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_18);
+			int input_count = 0, output_count = 0, returnSize = 0;
+			int* input_value;
+			int* output_value;
+			CString input,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", input.GetBuffer(200), 200, FileName_18);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(200), 200, FileName_18);
+				input_value = str_device(input, &input_count);
+				output_value = str_device(output, &output_count);
+				int* nReal = PlusOne(input_value, input_count, &returnSize);
+				for (int i = 0; i < input_count; i++) {
+					Assert::AreEqual(nReal[i], output_value[i]);
+				}
 			}
 		}
 	};

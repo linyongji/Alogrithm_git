@@ -54,7 +54,7 @@ int CalcCount(int n, char(*str)[10],const char *FileName)
 int* str_device(CString str, int* value_count)
 {
 	char* token;	//存放被切割后的第一个子串
-	static int Section_devide[500];//存放字符切割完成以后的数组元素值
+	int* Section_devide = (int*)malloc(sizeof(int) * 200);//存放字符切割完成以后的数组元素值
 	char Section_value[500] = { 0 };//存放nums转换成string类型的结果
 	memset(Section_value, 0, sizeof(char) * 500);
 	*value_count = 0;

@@ -29,6 +29,7 @@
 #include"../Alogrithm/include/14_SingleNumber.h"
 #include"../Alogrithm/include/15_WordPattern.h"
 #include"../Alogrithm/include/16_ReverseBits.h"
+#include"../Alogrithm/include/18_PlusOne.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);
