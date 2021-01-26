@@ -21,6 +21,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_18 "../Alogrithm/config/18_PlusOne.ini"
 #define FileName_19 "../Alogrithm/config/19_MySqrt.ini"
 #define FileName_20 "../Alogrithm/config/20_MoveZeroes.ini"
+#define FileName_21 "../Alogrithm/config/21_Reverse.ini"
 
 namespace UnitTest
 {
@@ -368,6 +369,21 @@ namespace UnitTest
 				for (int i = 0; i < input_count; i++) {
 					Assert::AreEqual(input_value[i], output_value[i]);
 				}
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_21)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_21);
+			CString input, output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", input.GetBuffer(100), 100, FileName_21);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(100), 100, FileName_21);
+				int nReal = Reverse(_ttoi(input));
+				Assert::AreEqual(nReal, _ttoi(output));
 			}
 		}
 	};
