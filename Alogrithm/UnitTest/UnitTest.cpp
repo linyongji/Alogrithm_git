@@ -20,6 +20,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_16 "../Alogrithm/config/16_ReverseBits.ini"
 #define FileName_18 "../Alogrithm/config/18_PlusOne.ini"
 #define FileName_19 "../Alogrithm/config/19_MySqrt.ini"
+#define FileName_20 "../Alogrithm/config/20_MoveZeroes.ini"
 
 namespace UnitTest
 {
@@ -345,6 +346,28 @@ namespace UnitTest
 				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(100), 100, FileName_19);
 				int nReal = MySqrt(_ttoi(input));
 				Assert::AreEqual(nReal, _ttoi(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_20)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_20);
+			int input_count = 0, output_count = 0, returnSize = 0;
+			int* input_value;
+			int* output_value;
+			CString input, output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", input.GetBuffer(200), 200, FileName_20);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(200), 200, FileName_20);
+				input_value = str_device(input, &input_count);
+				output_value = str_device(output, &output_count);
+				MoveZeroes(input_value, input_count);
+				for (int i = 0; i < input_count; i++) {
+					Assert::AreEqual(input_value[i], output_value[i]);
+				}
 			}
 		}
 	};

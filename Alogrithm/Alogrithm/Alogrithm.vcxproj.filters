@@ -81,6 +81,9 @@
     <ClCompile Include="src\19_MySqrt.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\20_MoveZeroes.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -137,6 +140,9 @@
     <ClInclude Include="include\19_MySqrt.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\20_MoveZeroes.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -191,6 +197,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\19_MySqrt.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\20_MoveZeroes.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>

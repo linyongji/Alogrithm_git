@@ -31,6 +31,7 @@
 #include"../Alogrithm/include/16_ReverseBits.h"
 #include"../Alogrithm/include/18_PlusOne.h"
 #include"../Alogrithm/include/19_MySqrt.h"
+#include"../Alogrithm/include/20_MoveZeroes.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);
