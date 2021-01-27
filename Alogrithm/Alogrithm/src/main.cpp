@@ -1,11 +1,9 @@
 #include<stdio.h>
-#include "../include/21_Reverse.h"
+#include "../include/22_Rotate.h"
 
 int main()
 {
-
-		printf("%d	",Reverse(214748364));
-
-
+	int arr[] = { 1,2,3,4,5,6,7};
+	Rotate3(arr, 7,3);
 	
 }

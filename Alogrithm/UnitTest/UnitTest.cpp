@@ -22,6 +22,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_19 "../Alogrithm/config/19_MySqrt.ini"
 #define FileName_20 "../Alogrithm/config/20_MoveZeroes.ini"
 #define FileName_21 "../Alogrithm/config/21_Reverse.ini"
+#define FileName_22 "../Alogrithm/config/22_Rotate.ini"
 
 namespace UnitTest
 {
@@ -384,6 +385,29 @@ namespace UnitTest
 				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(100), 100, FileName_21);
 				int nReal = Reverse(_ttoi(input));
 				Assert::AreEqual(nReal, _ttoi(output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_22)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_22);
+			int input_count = 0, output_count = 0, returnSize = 0;
+			int* input_value;
+			int* output_value;
+			CString input, output,k;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", input.GetBuffer(200), 200, FileName_22);
+				GetPrivateProfileString(Section_Name[i], "k", " ", k.GetBuffer(20), 20, FileName_22);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(200), 200, FileName_22);
+				input_value = str_device(input, &input_count);
+				output_value = str_device(output, &output_count);
+				 Rotate1(input_value, input_count, _ttoi(k));
+				for (int i = 0; i < input_count; i++) {
+					Assert::AreEqual(input_value[i], output_value[i]);
+				}
 			}
 		}
 	};

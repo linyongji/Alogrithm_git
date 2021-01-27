@@ -87,6 +87,9 @@
     <ClCompile Include="src\21_Reverse.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\22_Rotate.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -149,6 +152,9 @@
     <ClInclude Include="include\21_Reverse.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\22_Rotate.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -209,6 +215,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\21_Reverse.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\22_Rotate.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>

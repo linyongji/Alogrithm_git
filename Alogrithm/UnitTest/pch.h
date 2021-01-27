@@ -33,6 +33,7 @@
 #include"../Alogrithm/include/19_MySqrt.h"
 #include"../Alogrithm/include/20_MoveZeroes.h"
 #include"../Alogrithm/include/21_Reverse.h"
+#include"../Alogrithm/include/22_Rotate.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

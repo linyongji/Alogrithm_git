@@ -153,6 +153,7 @@
     <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp" />
     <ClCompile Include="src\20_MoveZeroes.cpp" />
     <ClCompile Include="src\21_Reverse.cpp" />
+    <ClCompile Include="src\22_Rotate.cpp" />
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp" />
     <ClCompile Include="src\3_bool IsUgly.cpp" />
     <ClCompile Include="src\4_IsPalindrome.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="include\1_ContainsNearbyDuplicate.h" />
     <ClInclude Include="include\20_MoveZeroes.h" />
     <ClInclude Include="include\21_Reverse.h" />
+    <ClInclude Include="include\22_Rotate.h" />
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h" />
     <ClInclude Include="include\3_bool IsUgly.h" />
     <ClInclude Include="include\4_IsPalindrome.h" />
@@ -198,6 +200,7 @@
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
     <None Include="config\20_MoveZeroes.ini" />
     <None Include="config\21_Reverse.ini" />
+    <None Include="config\22_Rotate.ini" />
     <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />
     <None Include="config\4_IsPalindrome.ini" />
