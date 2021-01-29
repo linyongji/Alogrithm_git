@@ -35,6 +35,7 @@
 #include"../Alogrithm/include/20_MoveZeroes.h"
 #include"../Alogrithm/include/21_Reverse.h"
 #include"../Alogrithm/include/22_Rotate.h"
+#include"../Alogrithm/include/23_RestoreIpAddresses.h"
 
 
 

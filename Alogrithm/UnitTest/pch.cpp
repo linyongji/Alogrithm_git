@@ -92,14 +92,14 @@ int str_device3(CString str, char* *return_str)
 {
 	int value_count = 0;
 	char* token;	//存放被切割后的第一个子串
-	char Section_value[500] = { 0 };//存放nums转换成string类型的结果
-	memset(Section_value, 0, sizeof(char) * 500);
+	char Section_value[1024] = { 0 };//存放nums转换成string类型的结果
+	memset(Section_value, 0, sizeof(char) * 1024);
 	strcpy(Section_value, str);//将CString类型的字符串转换成char类型，方便后面切割字符串
 	//获得切割到的第一个字符串
 	token = strtok(Section_value, ",");
 	/* 继续获取其他的子字符串 */
 	while (token != NULL) {
-		return_str[value_count] = (char*)malloc(sizeof(char) * 100);
+		return_str[value_count] = (char*)malloc(sizeof(char) * 1024);
 		strcpy(return_str[value_count], token);
 		token = strtok(NULL, ",");
 		value_count++;		//记录存了多少个元素

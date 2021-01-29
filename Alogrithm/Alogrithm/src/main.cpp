@@ -1,9 +1,13 @@
 #include<stdio.h>
-#include "../include/22_Rotate.h"
+#include "../include/23_RestoreIpAddresses.h"
 
 int main()
 {
-	int arr[] = { 1,2,3,4,5,6,7};
-	Rotate3(arr, 7,3);
+	char str[] = "11112345";
+	int m = 0;
+	char** res;
+	res = RestoreIpAddresses(str, &m);
+	for (int i = 0; i < m; i++)
+		printf("%s\n", res[i]);
 	
 }
