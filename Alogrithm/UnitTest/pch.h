@@ -29,6 +29,7 @@
 #include"../Alogrithm/include/14_SingleNumber.h"
 #include"../Alogrithm/include/15_WordPattern.h"
 #include"../Alogrithm/include/16_ReverseBits.h"
+#include"../Alogrithm/include/17_WordBreak.h"
 #include"../Alogrithm/include/18_PlusOne.h"
 #include"../Alogrithm/include/19_MySqrt.h"
 #include"../Alogrithm/include/20_MoveZeroes.h"
@@ -36,9 +37,11 @@
 #include"../Alogrithm/include/22_Rotate.h"
 
 
+
 int CalcCount(int n, char(*str)[10],const char *FileName);
 int* str_device(CString str, int* value_count);
 int str_device2(CString str, char(*return_str)[50]);
+int str_device3(CString str, char**return_str);
 bool CstrToBool(CString str);
 
 

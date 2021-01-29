@@ -183,3 +183,5 @@ Alogrithm/.vs/Alogrithm/v16/ipch/AutoPCH/eb64263dd3de4a08/22_ROTATE.ipch
 Alogrithm/.vs/Alogrithm/v16/TestStore/0/007.testlog
 Alogrithm/Alogrithm/Debug/22_Rotate.obj
 Alogrithm/UnitTest/Debug/UnitTest.tlog/link.15328.delete.1.tlog
+*.tlog
+*.obj
