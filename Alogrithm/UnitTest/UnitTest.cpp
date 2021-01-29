@@ -324,20 +324,20 @@ namespace UnitTest
 		{
 			char Section_Name[100][10] = { 0 };
 			int  Section_Count = CalcCount(100, Section_Name, FileName_17);
-			CString Input1, Input2,Output;
+			CString Input1, Input2, Output;
 			char Str_char[1024] = { 0 };
-			char *WordDic[100];
+			char* WordDic[100];
 			for (int i = 0; i < Section_Count; i++) {
 				GetPrivateProfileString(Section_Name[i], "Input1", " ", Input1.GetBuffer(200), 200, FileName_17);
 				GetPrivateProfileString(Section_Name[i], "Input2", " ", Input2.GetBuffer(500), 500, FileName_17);
-				GetPrivateProfileString(Section_Name[i], "Output", " ", Output.GetBuffer(20), 20, FileName_17);		
+				GetPrivateProfileString(Section_Name[i], "Output", " ", Output.GetBuffer(20), 20, FileName_17);
 				strcpy(Str_char, Input1);
 				int Wordic_count = str_device3(Input2, WordDic);
 				bool nReal = WordBreak(Str_char, WordDic, Wordic_count);
 				Assert::AreEqual(nReal, CstrToBool(Output));
 			}
 		}
-	}
+	};
 	TEST_CLASS(UnitTest_18)
 	{
 		TEST_METHOD(TestMethode1)

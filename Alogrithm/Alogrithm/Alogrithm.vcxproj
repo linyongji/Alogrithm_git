@@ -148,6 +148,7 @@
     <ClCompile Include="src\14_SingleNumber.cpp" />
     <ClCompile Include="src\15_WordPattern.cpp" />
     <ClCompile Include="src\16_ReverseBits.cpp" />
+    <ClCompile Include="src\17_WordBreak.cpp" />
     <ClCompile Include="src\18_PlusOne.cpp" />
     <ClCompile Include="src\19_MySqrt.cpp" />
     <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="include\14_SingleNumber.h" />
     <ClInclude Include="include\15_WordPattern.h" />
     <ClInclude Include="include\16_ReverseBits.h" />
+    <ClInclude Include="include\17_WordBreak.h" />
     <ClInclude Include="include\18_PlusOne.h" />
     <ClInclude Include="include\19_MySqrt.h" />
     <ClInclude Include="include\1_ContainsNearbyDuplicate.h" />
@@ -195,6 +197,7 @@
     <None Include="config\14_SingleNumber.ini" />
     <None Include="config\15_WordPattern.ini" />
     <None Include="config\16_ReverseBits.ini" />
+    <None Include="config\17_WordBreak.ini" />
     <None Include="config\18_PlusOne.ini" />
     <None Include="config\19_MySqrt.ini" />
     <None Include="config\1_ContainsNearbyDuplicate.ini" />

@@ -185,3 +185,5 @@ Alogrithm/Alogrithm/Debug/22_Rotate.obj
 Alogrithm/UnitTest/Debug/UnitTest.tlog/link.15328.delete.1.tlog
 *.tlog
 *.obj
+*.testlog
+*.coverage
