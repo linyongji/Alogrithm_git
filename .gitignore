@@ -187,3 +187,4 @@ Alogrithm/UnitTest/Debug/UnitTest.tlog/link.15328.delete.1.tlog
 *.obj
 *.testlog
 *.coverage
+*.ipch

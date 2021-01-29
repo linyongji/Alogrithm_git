@@ -24,6 +24,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_20 "../Alogrithm/config/20_MoveZeroes.ini"
 #define FileName_21 "../Alogrithm/config/21_Reverse.ini"
 #define FileName_22 "../Alogrithm/config/22_Rotate.ini"
+#define FileName_23 "../Alogrithm/config/23_RestoreIpAddresses.ini"
 
 
 
@@ -318,6 +319,7 @@ namespace UnitTest
 			}
 		}
 	};
+
 	TEST_CLASS(UnitTest_17)
 	{
 		TEST_METHOD(TestMethode1)
@@ -431,6 +433,31 @@ namespace UnitTest
 				 Rotate1(input_value, input_count, _ttoi(k));
 				for (int i = 0; i < input_count; i++) {
 					Assert::AreEqual(input_value[i], output_value[i]);
+				}
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_23)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_23);
+			CString Input, Output;
+			char Str_char[20];
+			char** return_char ;
+			int return_len = 0;
+			char output_char[100][50];
+			int output_len = 0;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", Input.GetBuffer(20), 20, FileName_23);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", Output.GetBuffer(1024), 1024, FileName_23);
+				output_len = str_device2(Output, output_char);
+				strcpy(Str_char, Input);
+				return_char = RestoreIpAddresses(Str_char, &return_len);
+				Assert::AreEqual(return_len, output_len);		//先判断个数是否相等
+				for (int j = 0; j < return_len; j++) {			//循环挨个比较
+					Assert::AreEqual(return_char[j], output_char[j]);
 				}
 			}
 		}
