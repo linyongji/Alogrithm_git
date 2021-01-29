@@ -89,6 +89,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <ModuleOutputFile>$(IntDir)%(RelativeDir)</ModuleOutputFile>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,6 +149,7 @@
     <ClCompile Include="src\14_SingleNumber.cpp" />
     <ClCompile Include="src\15_WordPattern.cpp" />
     <ClCompile Include="src\16_ReverseBits.cpp" />
+    <ClCompile Include="src\17_WordBreak.cpp" />
     <ClCompile Include="src\1_ContainsNearbyDuplicate.cpp" />
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp" />
     <ClCompile Include="src\3_bool IsUgly.cpp" />
@@ -167,6 +169,7 @@
     <ClInclude Include="include\14_SingleNumber.h" />
     <ClInclude Include="include\15_WordPattern.h" />
     <ClInclude Include="include\16_ReverseBits.h" />
+    <ClInclude Include="include\17_WordBreak.h" />
     <ClInclude Include="include\1_ContainsNearbyDuplicate.h" />
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h" />
     <ClInclude Include="include\3_bool IsUgly.h" />
@@ -185,6 +188,7 @@
     <None Include="config\14_SingleNumber.ini" />
     <None Include="config\15_WordPattern.ini" />
     <None Include="config\16_ReverseBits.ini" />
+    <None Include="config\17_WordBreak.ini" />
     <None Include="config\1_ContainsNearbyDuplicate.ini" />
     <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />

@@ -18,6 +18,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_14 "../Alogrithm/config/14_SingleNumber.ini"
 #define FileName_15 "../Alogrithm/config/15_WordPattern.ini"
 #define FileName_16 "../Alogrithm/config/16_ReverseBits.ini"
+#define FileName_17 "../Alogrithm/config/17_WordBreak.ini"
 
 
 namespace UnitTest
@@ -308,6 +309,28 @@ namespace UnitTest
 				uint32_t nReal = ReverseBits((uint32_t)_atoi64(input));
 				Assert::AreEqual(nReal, (uint32_t)_atoi64(output));
 			}
+		}
+	};
+	TEST_CLASS(UnitTest_17)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_17);
+			CString Input1, Input2,Output;
+			char Str_char[1024] = { 0 };
+			char *WordDic[100];
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input1", " ", Input1.GetBuffer(200), 200, FileName_17);
+				GetPrivateProfileString(Section_Name[i], "Input2", " ", Input2.GetBuffer(500), 500, FileName_17);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", Output.GetBuffer(20), 20, FileName_17);		
+
+				strcpy(Str_char, Input1);
+				int Wordic_count = str_device3(Input2, WordDic);
+				bool nReal = WordBreak(Str_char, WordDic, Wordic_count);
+				Assert::AreEqual(nReal, CstrToBool(Output));
+			}
+
 		}
 	};
 }

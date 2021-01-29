@@ -154,3 +154,9 @@ Alogrithm/.vs/Alogrithm/v16/ipch/AutoPCH/5ccdb9c64312b2ee/16_REVERSEBITS.ipch
 Alogrithm/.vs/Alogrithm/v16/ipch/AutoPCH/969dd2cbf6a00d1b/16_REVERSEBITS.ipch
 Alogrithm/.vs/Alogrithm/v16/TestStore/0/003.testlog
 Alogrithm/Alogrithm/Debug/16_ReverseBits.obj
+Alogrithm/.vs/Alogrithm/v16/ipch/AutoPCH/13d1a063a12e2911/17_WORDBREAK.ipch
+Alogrithm/Alogrithm/Debug/17_WordBreak.obj
+*.tlog
+*.coverage
+*.testlog
+*.ipch
