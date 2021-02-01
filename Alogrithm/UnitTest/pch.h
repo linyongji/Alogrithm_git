@@ -37,6 +37,7 @@
 #include"../Alogrithm/include/22_Rotate.h"
 #include"../Alogrithm/include/23_RestoreIpAddresses.h"
 #include"../Alogrithm/include/24_LengthOfLongestSubstring.h"
+#include"../Alogrithm/include/25_Partition.h"
 
 
 int CalcCount(int n, char(*str)[10],const char *FileName);

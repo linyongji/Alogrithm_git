@@ -157,6 +157,7 @@
     <ClCompile Include="src\22_Rotate.cpp" />
     <ClCompile Include="src\23_RestoreIpAddresses.cpp" />
     <ClCompile Include="src\24_LengthOfLongestSubstring.cpp" />
+    <ClCompile Include="src\25_Partition.cpp" />
     <ClCompile Include="src\2_ExcelSheetColumnTitle.cpp" />
     <ClCompile Include="src\3_bool IsUgly.cpp" />
     <ClCompile Include="src\4_IsPalindrome.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="src\7_MaxDepth.cpp" />
     <ClCompile Include="src\8_HammingWeight.cpp" />
     <ClCompile Include="src\9_AddBinary.cpp" />
+    <ClCompile Include="src\Common.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +186,7 @@
     <ClInclude Include="include\22_Rotate.h" />
     <ClInclude Include="include\23_RestoreIpAddresses.h" />
     <ClInclude Include="include\24_LengthOfLongestSubstring.h" />
+    <ClInclude Include="include\25_Partition.h" />
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h" />
     <ClInclude Include="include\3_bool IsUgly.h" />
     <ClInclude Include="include\4_IsPalindrome.h" />
@@ -192,6 +195,7 @@
     <ClInclude Include="include\7_MaxDepth.h" />
     <ClInclude Include="include\8_HammingWeight.h" />
     <ClInclude Include="include\9_AddBinary.h" />
+    <ClInclude Include="include\Common.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config\10_BinaryTreePaths.ini" />
@@ -210,6 +214,7 @@
     <None Include="config\22_Rotate.ini" />
     <None Include="config\23_RestoreIpAddresses.ini" />
     <None Include="config\24_LengthOfLongestSubstring.ini" />
+    <None Include="config\25_Partition.ini" />
     <None Include="config\2_ExcelSheetColumnTiTle.ini" />
     <None Include="config\3_bool IsUgly.ini" />
     <None Include="config\4_IsPalindrome.ini" />
