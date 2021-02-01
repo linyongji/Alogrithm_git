@@ -26,7 +26,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_22 "../Alogrithm/config/22_Rotate.ini"
 #define FileName_23 "../Alogrithm/config/23_RestoreIpAddresses.ini"
 #define FileName_24 "../Alogrithm/config/24_LengthOfLongestSubstring.ini"
-
+#define FileName_25 "../Alogrithm/config/25_Partition.ini"
 
 
 
@@ -478,6 +478,33 @@ namespace UnitTest
 				strcpy(Str_char, Input);
 				int nReal = LengthOfLongestSubstring(Str_char);
 				Assert::AreEqual(nReal, _ttoi(Output));
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_25)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_25);
+			int input_count = 0, output_count = 0, returnSize = 0;
+			int* input_value;
+			int* output_value;
+			CString input1, input2,output;
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input1", " ", input1.GetBuffer(200), 200, FileName_25);
+				GetPrivateProfileString(Section_Name[i], "Input2", " ", input2.GetBuffer(20), 20, FileName_25);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", output.GetBuffer(200), 200, FileName_25);
+				input_value = str_device(input1, &input_count);
+				output_value = str_device(output, &output_count);
+				struct ListNode* head = (struct ListNode*)malloc(sizeof(struct ListNode));
+				CreatListNode(input_value,input_count,head);
+				struct ListNode* returnHead = Partition(head, atoi(input2));
+				Assert::AreEqual(input_count, output_count);
+				for (int i = 0; i < input_count; i++) {
+					Assert::AreEqual(returnHead->val, output_value[i]);
+					returnHead = returnHead->next;
+				}
 			}
 		}
 	};

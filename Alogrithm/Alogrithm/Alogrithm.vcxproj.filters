@@ -99,6 +99,12 @@
     <ClCompile Include="src\24_LengthOfLongestSubstring.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\25_Partition.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -173,6 +179,12 @@
     <ClInclude Include="include\24_LengthOfLongestSubstring.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\25_Partition.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -245,6 +257,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\24_LengthOfLongestSubstring.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\25_Partition.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>
