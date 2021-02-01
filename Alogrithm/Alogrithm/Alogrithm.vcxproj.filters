@@ -96,6 +96,9 @@
     <ClCompile Include="src\23_RestoreIpAddresses.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\24_LengthOfLongestSubstring.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\2_ExcelSheetColumnTitle.h">
@@ -167,6 +170,9 @@
     <ClInclude Include="include\23_RestoreIpAddresses.h">
       <Filter>头文件\include</Filter>
     </ClInclude>
+    <ClInclude Include="include\24_LengthOfLongestSubstring.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\3_bool IsUgly.ini">
@@ -236,6 +242,9 @@
       <Filter>资源文件\config</Filter>
     </None>
     <None Include="config\23_RestoreIpAddresses.ini">
+      <Filter>资源文件\config</Filter>
+    </None>
+    <None Include="config\24_LengthOfLongestSubstring.ini">
       <Filter>资源文件\config</Filter>
     </None>
   </ItemGroup>

@@ -25,6 +25,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define FileName_21 "../Alogrithm/config/21_Reverse.ini"
 #define FileName_22 "../Alogrithm/config/22_Rotate.ini"
 #define FileName_23 "../Alogrithm/config/23_RestoreIpAddresses.ini"
+#define FileName_24 "../Alogrithm/config/24_LengthOfLongestSubstring.ini"
 
 
 
@@ -459,6 +460,24 @@ namespace UnitTest
 				for (int j = 0; j < return_len; j++) {			//循环挨个比较
 					Assert::AreEqual(return_char[j], output_char[j]);
 				}
+			}
+		}
+	};
+	TEST_CLASS(UnitTest_24)
+	{
+		TEST_METHOD(TestMethode1)
+		{
+			char Section_Name[100][10] = { 0 };
+			int  Section_Count = CalcCount(100, Section_Name, FileName_24);
+			CString Input, Output;
+			char Str_char[1024] = { 0 };
+			char* WordDic[100];
+			for (int i = 0; i < Section_Count; i++) {
+				GetPrivateProfileString(Section_Name[i], "Input", " ", Input.GetBuffer(200), 200, FileName_24);
+				GetPrivateProfileString(Section_Name[i], "Output", " ", Output.GetBuffer(20), 20, FileName_24);
+				strcpy(Str_char, Input);
+				int nReal = LengthOfLongestSubstring(Str_char);
+				Assert::AreEqual(nReal, _ttoi(Output));
 			}
 		}
 	};
